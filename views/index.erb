@@ -1,8 +1,15 @@
 Makers Air B'n'G
 <br>
-<a href="./login_page.erb"> Login page </a>
-<br>
-<a href="./signup_page.erb"> Sign up page </a>
-<br>
-<a href="./signout.erb"> Sign out</a>
+<%if @username%>
+  Hi, <%= @username %>!<br>
+  <a href="./sign_out">Sign out</a>
+<% else %>
+  <a href="./sign_in">Sign in</a>
+  <br>
+  <a href="./sign_up">Sign up</a>
+  <br>
+  <a href="./sign_out">Sign out</a>
+<% end %>
+
+
 
