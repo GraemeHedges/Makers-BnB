@@ -6,4 +6,8 @@ class SignUp < ApplicationController
     erb(:sign_up)
   end
 
+  post '/sign-up' do
+    redirect '/'
+  end
+
 end
