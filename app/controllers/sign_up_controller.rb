@@ -1,11 +1,6 @@
-require 'sinatra/base'
+require_relative './application_controller'
 
-class SignUp < Sinatra::Base
-
-  configure do
-    set :views, "app/views"
-    set :public_dir, "public"
-  end
+class SignUp < ApplicationController
 
   get '/sign-up' do
     erb(:sign_up)
