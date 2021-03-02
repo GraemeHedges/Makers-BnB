@@ -9,24 +9,24 @@ class MakersBnG < Sinatra::Base
     erb(:index)
   end
 
-  get '/sign_up' do
+  get '/sign-up' do
     erb(:sign_up)
   end
 
-  post '/sign_up' do
+  post '/sign-up' do
     redirect './'
   end
 
-  get '/sign_in' do
+  get '/sign-in' do
     erb(:sign_in)
   end
 
-  post '/sign_in' do
+  post '/sign-in' do
     session[:username] = params[:username]
     redirect '/'
   end
 
-  get '/sign_out' do
+  get '/sign-out' do
     session[:username] = nil
     redirect '/'
   end
