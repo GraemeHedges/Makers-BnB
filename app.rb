@@ -9,8 +9,12 @@ class MakersBnG < Sinatra::Base
     erb(:index)
   end
 
-  get '/sign-up' do
+  get '/sign_up' do
     erb(:sign_up)
+  end
+
+  post '/sign_up' do
+    redirect './'
   end
 
   get '/sign_in' do

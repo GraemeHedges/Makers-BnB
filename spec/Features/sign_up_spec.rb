@@ -1,6 +1,6 @@
 feature "user has option to sign up" do
   scenario "user can register for an account" do
-    visit('/sign-up')
+    visit('/sign_up')
     expect(page).to have_content('Name')
     expect(page).to have_content('Email')
     expect(page).to have_content('Password')
