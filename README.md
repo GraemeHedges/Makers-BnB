@@ -7,7 +7,6 @@ Our goal of this project is to create an app where a user can list a space for a
 # User Stories
 
 ```
-- ![#1589F0]( )`#1589F0`
 As a signed up user
 So my space can be advertised
 I can list a new space 
