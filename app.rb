@@ -3,7 +3,7 @@ require 'sinatra/base'
 class MakersBnG < Sinatra::Base
 
   get '/' do 
-    'Makers Air B\'n\'G'
+    erb(:index)
   end
 
   run! if app_file == $0
