@@ -4,7 +4,7 @@ class MakersBnG < Sinatra::Base
   require_relative './app/controllers/sign_up_controller.rb'
 
   get '/' do 
-    'Makers Air B\'n\'G'
+    erb(:index)
   end
 
   get '/sign-up' do
