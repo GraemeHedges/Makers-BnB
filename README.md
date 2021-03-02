@@ -9,7 +9,7 @@ Our goal of this project is to create an app where a user can list a space for a
 ```
 As a signed up user
 So my space can be advertised
-I can list a new space
+I can list a new space 
 ```
 ```
 As a signed up user
