@@ -1,17 +1,18 @@
 require 'sinatra/base'
 
-class SignUp < Sinatra::Base
+class SignIn < Sinatra::Base
 
   configure do
     set :views, "app/views"
     set :public_dir, "public"
   end
 
-  get '/sign-up' do
-    erb(:sign_up)
+  get '/sign-in' do
+    erb(:sign_in)
   end
 
-  post '/sign-up' do
+  post '/sign-in' do
+    session[:username] = params[:username]
     redirect '/'
   end
 
