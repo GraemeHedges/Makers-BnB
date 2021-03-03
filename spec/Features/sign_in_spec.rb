@@ -23,5 +23,6 @@ feature 'Viewing Homepage' do
     expect(page).to have_content('Sign out')
     expect(page).to have_content('Old Greg')
     expect(page).to have_content('Makers Air B\'n\'G')
+    expect(page).to have_link 'Requests', href: './requests'
   end
 end
