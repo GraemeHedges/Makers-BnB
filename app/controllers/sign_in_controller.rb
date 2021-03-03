@@ -1,5 +1,3 @@
-require 'sinatra/base'
-
 class SignIn < ApplicationController
 
   get '/sign-in' do

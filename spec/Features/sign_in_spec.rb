@@ -11,12 +11,7 @@ feature 'Viewing Homepage' do
   end
 
   scenario 'A user can fill in their username and password to log in and redirect back to homepage' do
-    visit '/'
-    click_link 'Sign in'
-
-    fill_in 'username', with: 'Old Greg'
-    fill_in 'password', with: 'Password1!'
-    click_on 'Submit'
+    sign_in_user
 
     expect(page).not_to have_content('Sign in')
     expect(page).not_to have_content('Sign up')

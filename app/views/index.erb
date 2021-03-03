@@ -2,9 +2,13 @@ Makers Air B'n'G
 <br>
 <%if @username%>
   Hi, <%= @username %>!<br>
-  <a href="./sign-out">Sign out</a>
-<% else %>
-  <a href="./sign-in">Sign in</a>
+  <a href="/sign-out">Sign out</a>
   <br>
-  <a href="./sign-up">Sign up</a>
+  <a href="/list-a-space">List a space</a>
+<% else %>
+  <a href="/sign-in">Sign in</a>
+  <br>
+  <a href="/sign-up">Sign up</a>
 <% end %>
+<br>
+<a href="/spaces">Spaces</a>
