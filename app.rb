@@ -7,6 +7,7 @@ class MakersBnG < Sinatra::Base
   require_relative './app/controllers/sign_out_controller.rb'
   require_relative './app/controllers/spaces_controller.rb'
   require_relative './app/controllers/homepage_controller.rb'
+  require_relative './app/controllers/list_a_space_controller.rb'
   require_relative './app/controllers/requests_controller.rb'
   
   use ApplicationController
@@ -16,6 +17,7 @@ class MakersBnG < Sinatra::Base
   use SignOut
   use Spaces
   use HomePage
+  use ListASpace
 
 
   run! if app_file == $0

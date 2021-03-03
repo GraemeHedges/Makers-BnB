@@ -1,5 +1,3 @@
-require 'sinatra/base'
-
 class HomePage < ApplicationController
 
   get '/' do 

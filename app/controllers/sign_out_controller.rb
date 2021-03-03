@@ -1,5 +1,3 @@
-require 'sinatra/base'
-
 class SignOut < ApplicationController
 
   get '/sign-out' do
