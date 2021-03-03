@@ -9,6 +9,8 @@ class MakersBnG < Sinatra::Base
   require_relative './app/controllers/homepage_controller.rb'
   require_relative './app/controllers/list_a_space_controller.rb'
   require_relative './app/controllers/requests_controller.rb'
+  require_relative './app/controllers/individual_space_page_controller.rb'
+
   
   use ApplicationController
   use SignUp
@@ -18,6 +20,7 @@ class MakersBnG < Sinatra::Base
   use Spaces
   use HomePage
   use ListASpace
+  use IndividualSpace
 
 
   run! if app_file == $0

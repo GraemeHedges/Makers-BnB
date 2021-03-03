@@ -10,7 +10,7 @@ feature "The user can list a space" do
     expect(page).to have_content('Available to')
     fill_in 'to', with: '04032021'
     expect(page).to have_content('Upload image')
-    attach_file('upload', './spec/Features/test_image.jpg') 
+    attach_file('upload', './public/img/test_image.jpg') 
     expect(page).to have_content('Description')
     fill_in 'description', with: 'cosy boat with lots of baileys and shoes'
     expect(page).to have_content('Price')
