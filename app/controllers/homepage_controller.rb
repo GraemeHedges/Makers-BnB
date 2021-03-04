@@ -1,4 +1,4 @@
-class HomePage < ApplicationController
+class HomePageController < ApplicationController
 
   get '/' do 
     @username = session[:username]

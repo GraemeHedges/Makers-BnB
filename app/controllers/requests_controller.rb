@@ -1,6 +1,6 @@
 require_relative './application_controller'
 
-class Requests < ApplicationController
+class RequestsController < ApplicationController
 
   get '/requests' do
     erb(:requests)

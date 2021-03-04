@@ -25,7 +25,8 @@ require_relative './Features/web_helpers.rb'
 
 Capybara.app = MakersBnG
 
-
+ENV['RACK_ENV'] = 'test'
+ENV['ENVIRONMENT'] = 'test'
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate

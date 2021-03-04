@@ -1,4 +1,4 @@
-class ListASpace < ApplicationController
+class ListASpaceController < ApplicationController
   get '/list-a-space' do
     erb(:list_a_space)
   end

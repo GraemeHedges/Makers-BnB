@@ -1,4 +1,4 @@
-class Spaces < ApplicationController
+class SpacesController < ApplicationController
 
   get '/spaces' do
     erb(:spaces)

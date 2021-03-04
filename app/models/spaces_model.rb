@@ -1,25 +1,26 @@
-class SpacesModel
+require 'sinatra/activerecord'
 
-  attr_reader :name, :price, :description, :available, :space_owner
+class Spaces < ActiveRecord::Base
 
-  def initialize(name:, price:, description:, space_owner:)
-    @name = name
-    @price = price 
-    @description = description
-    @available = true
-    @space_owner = space_owner
+  def self.create(params)
+    space = Spaces.new
+    space.name = params[:name]
+    space.price = params[:price]
+    space.description = params[:description]
+    space.available_from = params[:from]
+    space.available_to = params[:to]
+    space.space_owner = params[:space_owner]
+    space.save!
   end
 
-  def change_availablity
-    @available ? @available = false : @available = true
+  def self.delete(param)
+    space = Spaces.find_by(name: param)
+    space.destroy
   end
 
-  def guest
-    if @available == true
-      false
-    else
-      true
-    end
+  def self.search(date)
+    date = date
+    space = Spaces.where('available_from < ? AND available_to > ?', date, date)
   end
 
 end
