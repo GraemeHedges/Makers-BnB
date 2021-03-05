@@ -1,4 +1,4 @@
-class IndividualSpace < ApplicationController
+class IndividualSpaceController < ApplicationController
 
   get '/individual-space' do
     erb(:individual_space_page)

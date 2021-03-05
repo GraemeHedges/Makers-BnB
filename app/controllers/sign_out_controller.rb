@@ -1,4 +1,4 @@
-class SignOut < ApplicationController
+class SignOutController < ApplicationController
 
   get '/sign-out' do
     session[:user] = nil
