@@ -17,10 +17,12 @@ class User < ActiveRecord::Base
   end
 
   def self.authenticate(params)
-    user = User.find_by(email: params[:email])
+    user = User.find_by(name: params[:username])
     if user && Password.new(user.password) == params[:password]
+      p "****USER EXISTS****"
       return user
     else
+      p "****USER NOT FOUND****"
       return nil
     end
   end

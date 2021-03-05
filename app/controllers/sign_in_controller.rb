@@ -5,8 +5,13 @@ class SignIn < ApplicationController
   end
 
   post '/sign-in' do
-    session[:username] = params[:username]
-    redirect '/'
+    @user = User.authenticate(params)
+    if @user
+      erb(:index)
+    else
+      @login_error = "Username or password incorrect"
+      erb(:sign_in)
+    end
   end
 
 end

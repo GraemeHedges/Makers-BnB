@@ -1,5 +1,6 @@
 feature "The user can list a space" do
   scenario "A signed-in user lists the details of their space in a form" do
+    sign_up_user
     sign_in_user
     click_link 'List a space'
 
