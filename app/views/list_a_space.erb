@@ -1,27 +1,23 @@
 <form action="/list-a-space" method="post">
   <label for="name">
     Name
-    <input type="text" name="name">
+    <input type="text" name="name" required>
   </label>
   <label for="from">
     Available from:
-    <input type="date" name="from">
+    <input type="date" name="from" required>
   </label>
   <label for="to">
     Available to:
-    <input type="date" name="to">
-  </label>
-  <label for="upload">
-    Upload image
-    <input type="file" name="upload">
+    <input type="date" name="to" required>
   </label>
   <label for="description">
     Description:
-    <input type="text" name="description">
+    <input type="text" name="description" required>
   </label>
   <label for="price">
     Price:
-    <input type="text" name="price">
+    <input type="text" name="price" required>
   </label>
   <input type="submit" value="List space">
 </form>

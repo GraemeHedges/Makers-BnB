@@ -1,4 +1,4 @@
-class SignUp < ApplicationController
+class SignUpController < ApplicationController
 
   get '/sign-up' do
     erb(:sign_up)
