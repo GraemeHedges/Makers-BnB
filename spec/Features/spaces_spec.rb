@@ -1,5 +1,6 @@
 feature "View Properties listed on our spaces page" do
   scenario "A user can select dates" do
+    sign_up_user
     sign_in_user
     click_link 'List a space'
 
