@@ -4,6 +4,7 @@ class ListASpaceController < ApplicationController
   end
 
   post '/list-a-space' do
+    Spaces.create(params)
     redirect '/'
   end
 end

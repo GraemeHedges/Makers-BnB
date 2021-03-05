@@ -1,7 +1,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: airbng
+  database: airbng_dev
   pool: 2
 
 production:

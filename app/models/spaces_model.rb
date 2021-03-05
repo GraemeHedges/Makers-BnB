@@ -2,6 +2,8 @@ require 'sinatra/activerecord'
 
 class Spaces < ActiveRecord::Base
 
+  # self.establish_connection(ENV['RACK_ENV'].to_sym)
+
   def self.create(params)
     space = Spaces.new
     space.name = params[:name]

@@ -11,8 +11,6 @@ class MakersBnG < Sinatra::Base
   require_relative './app/controllers/requests_controller.rb'
   require_relative './app/controllers/individual_space_page_controller.rb'
 
-
-  
   use ApplicationController
   use SignUpController
   use SignInController
