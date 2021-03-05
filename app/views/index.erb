@@ -1,122 +1,70 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Makers Air B'n'B</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-	<link href="style.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Makers Air B'n'B</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <link href="style.css" rel="stylesheet">
 </head>
+
 <body>
 
-<!-- Navigation -->
 
-<nav class="navbar navbar-expand-md navbar-light sticky-top">
-<div class="container-fluid"> 
-    <a class="nav-brand" href="#"><img src= "img/logoo.png"/>
-    <button class ="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"> 
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#"> <img src="img/default.png" height="75" width="75"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto">
+  </button>
 
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ms-auto">
 
 <%if @username%>
-        <li class="navbar-item">  
-          <a class="nav-link" href="/spaces">Spaces</a> 
+     <li class="nav-item">
+       <a class="nav-link" href="/spaces">Spaces</a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="/requests">Requests</a>
+      </li>
+     <li class="nav-item">
+        <a class="nav-link" href="/list-a-space">List a space</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/sign-out">Sign out</a>
+     </li>
+     <li class="nav-item">
+        <a class="nav-link" href="#">
+         <%if @username%>
+            Hi, <%= @username %>!<br>
+        </a>
+        <% end %>
+      </li>
+
+  <% else %>
+        <li class="nav-item">
+          <a class="nav-link" href="/sign-up">Sign up</a>
         </li>
 
-        <li class="navbar-item">  
-          <a class="nav-link" href="/requests">Requests</a>
-        </li>
+        <li class="nav-item">
+         <a class="nav-link" href="/sign-in">Sign in</a>
+       </li>
 
-        <li class="navbar-item">  
-          <a class="nav-link" href="/list-a-space">List a space</a>
-        </li>
-
-        <li class="navbar-item">  
-          <a class="nav-link" href="/sign-out">Sign out</a> 
-        </li>
-
-        <li class="navbar-item">  
-          <a class="nav-link" href="#"> 
-          <%if @username%>
-          Hi, <%= @username %>!<br></a> 
-          <% end %>
-        </li>
-
-<% else %>
-        <li class="navbar-item">  
-          <a class="nav-link" href="/sign-up">Sign up</a> 
-        </li>
-
-        <li class="navbar-item">  
-          <a class="nav-link" href="/sign-in">Sign in</a> 
-        </li>
-
-      </ul>
-<% end %>      
-</div>
+        </ul>
+    <% end %>
+      </div>
+      </nav>
+    </ul>
+  </div>
 </nav>
 
 
-<div id="slides" class="carosel slide" data-ride="carousel"> 
-  <ul class="carousel-indicators">
-    <li data-target="#slides" data-slide-to="0" class="active"> </li>
-    <li data-target="#slides" data-slide-to="1">   </li>
-  </ul>
-  <div class="carousel-inner">
-      <div class="carousel-item active">
-      <img src="img/background.png">
-        <div class="carousel-caption">
-        <h1 class="display2"> Makers B'n'B</h1>
-        <h3>The Best B'n'B Around..... </h3>
-        <button type="button" class="btn btn-outline-light btn-lg"> BOOK A SPACE</button>
-          </div>
-      </div>
-      </div>
-  </div>
-</div>
-<!--- Jumbotron -->
-
-
-<!--- Welcome Section -->
-
-
-<!--- Three Column Section -->
-
-
-<!--- Two Column Section -->
-
-
-<!--- Fixed background -->
-
-
-<!--- Emoji Section -->
-
-  
-<!--- Meet the team -->
-
-
-<!--- Cards -->
-
-
-<!--- Two Column Section -->
-
-
-<!--- Connect -->
-
-
-<!--- Footer -->
-
-
 </body>
+
 </html>
-
-
