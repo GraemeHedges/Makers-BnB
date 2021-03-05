@@ -10,13 +10,15 @@
   </label><br>
   <label for="password">
     Password
-    <input type="password">
+    <input type="password" name="password">
   </label><br>
-  <label for="confirm-password">
+  <label for="confirm_password">
     Confirm Password
-    <input type="password" name="confirm-password">
+    <input type="password" name="confirm_password">
   </label><br>
   <input type="submit" value="Submit">
 </form>
+
+<%= @password_error %>
 <br>
 Already registered? <a href="/sign-in">Sign In</a>

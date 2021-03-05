@@ -13,14 +13,14 @@ class MakersBnG < Sinatra::Base
 
   
   use ApplicationController
-  use SignUp
-  use SignIn
-  use Requests
-  use SignOut
-  use Spaces
-  use HomePage
-  use ListASpace
-  use IndividualSpace
+  use SignUpController
+  use SignInController
+  use RequestsController
+  use SignOutController
+  use SpacesController
+  use HomePageController
+  use ListASpaceController
+  use IndividualSpaceController
 
 
   run! if app_file == $0
