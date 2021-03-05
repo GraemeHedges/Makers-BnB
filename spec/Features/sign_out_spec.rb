@@ -1,12 +1,8 @@
 feature 'Viewing Homepage' do
 
-  scenario 'A user can fill in their username and password to log in and redirect back to homepage' do
-    visit '/'
-    click_link 'Sign in'
-
-    fill_in 'username', with: 'Old Greg'
-    fill_in 'password', with: 'Password1!'
-    click_on 'Submit'
+  scenario 'A signed-in user can sign out and see non-signed-in homepage' do
+    sign_up_user
+    sign_in_user
 
     click_link 'Sign out'
 

@@ -25,7 +25,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ms-auto">
 
-<%if @username%>
+<%if @user%>
      <li class="nav-item">
        <a class="nav-link" href="/">Home</a>
       </li>
@@ -40,10 +40,8 @@
      </li>
      <li class="nav-item">
         <a class="nav-link" href="#">
-         <%if @username%>
-            Hi, <%= @username %>!<br>
+            Hi, <%= @user.name %>!<br>
         </a>
-        <% end %>
       </li>
   <% else %>
        <li class="nav-item">
@@ -69,15 +67,24 @@
 <div class="col-md-1">
   <div class="row-md-1">
 
-   <form action="/spaces" method="post">
-    <label for="from">Available from: 
-      <input type="date" name="from"> 
-       </label>
-      <label for="to">Available to: 
-        <input type="date" name="to"> 
-        </label>
-      <input type="submit" value="List Spaces"> 
-      </form>
+<form action="/spaces" method="post">
+
+<label for="from">Night to stay 
+  <input type="date" name="night" required> 
+</label>
+
+<input type="submit" value="List Spaces"> 
+</form>
+<ul>
+<%if @result%>
+  <% @result.each do |k|%>
+    <li>Name: <%= "#{k.name}" %></li>
+    <li>Description: <%= "#{k.description}" %></li>
+    <li>Price: <%= "#{k.price}" %></li>
+    <br>
+  <%end%>
+<%end%>
+<ul>
   </div>
 </div>
 

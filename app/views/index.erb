@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,7 +39,7 @@
 </div>
 </div>
 
-<%if @username%>
+<%if @user%>
      <li class="nav-item">
        <a class="nav-link" href="/spaces">Spaces</a>
       </li>
@@ -53,10 +54,8 @@
      </li>
      <li class="nav-item">
         <a class="nav-link" href="#">
-         <%if @username%>
-            Hi, <%= @username %>!<br>
+            Hi, <%= @user.name %>!<br>
         </a>
-        <% end %>
       </li>
 
   <% else %>
@@ -80,3 +79,4 @@
 </body>
 
 </html>
+

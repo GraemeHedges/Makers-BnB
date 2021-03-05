@@ -25,7 +25,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ms-auto">
 
-<%if @username%>
+<%if @user%>
      <li class="nav-item">
        <a class="nav-link" href="/spaces">Spaces</a>
       </li>
@@ -40,10 +40,8 @@
      </li>
      <li class="nav-item">
         <a class="nav-link" href="#">
-         <%if @username%>
-            Hi, <%= @username %>!<br>
+            Hi, <%= @user.name %>!<br>
         </a>
-        <% end %>
       </li>
       
   <% else %>
@@ -69,10 +67,16 @@
   </label><br>
   <label for="password">
     Password
-    <input type="password">
+    <input type="password" name="password">
+  </label><br>
+  <label for="confirm_password">
+    Confirm Password
+    <input type="password" name="confirm_password">
   </label><br>
   <input type="submit" value="Submit">
 </form>
+
+<%= @password_error %>
 <br>
 Already registered? <a href="/sign-in">Sign In</a>
 
