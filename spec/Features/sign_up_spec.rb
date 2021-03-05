@@ -21,4 +21,15 @@ feature "user has option to sign up" do
     user = User.find_by(email: 'oldgregg@greggs.co.ugreggs')
     expect(user.name).to eq('Old Greg')
   end
+
+  scenario "displays error when passwords don't match" do
+    sign_up_user_wrong_password
+    expect(page).to have_content "Passwords do not match"
+  end
+
+  scenario "user not added to database when passwords don't match" do
+    sign_up_user_wrong_password
+    user = User.find_by(email: 'oldgregg@greggs.co.ugreggs')
+    expect(user).to eq nil
+  end
 end

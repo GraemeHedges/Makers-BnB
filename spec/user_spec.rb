@@ -27,8 +27,8 @@ describe User do
       user = User.authenticate({email: 'oldgregg@greggs.co.ugreggs', password: 'verymuchnotgreggypass'})
       expect(user).to eq(nil)
     end
-    it 'doesnt allow someone to log in with wrong name' do
-      user = User.authenticate({email: 'notatalloldgregg@greggs.co.ugreggs', password: 'thisreallydoesntmatter'})
+    it 'doesnt allow someone to log in with wrong email, even with correct password' do
+      user = User.authenticate({email: 'notatalloldgregg@greggs.co.ugreggs', password: 'greggypass'})
       expect(user).to eq(nil)
     end
   end
