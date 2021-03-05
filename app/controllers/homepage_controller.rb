@@ -1,7 +1,7 @@
 class HomePageController < ApplicationController
 
   get '/' do 
-    @username = session[:username]
+    @user = session[:user]
     erb(:index)
   end
 

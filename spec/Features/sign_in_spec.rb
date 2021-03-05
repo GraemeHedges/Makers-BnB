@@ -11,13 +11,18 @@ feature 'Viewing Homepage' do
   end
 
   scenario 'A user can fill in their username and password to log in and redirect back to homepage' do
+    sign_up_user
     sign_in_user
-
     expect(page).not_to have_content('Sign in')
     expect(page).not_to have_content('Sign up')
     expect(page).to have_content('Sign out')
     expect(page).to have_content('Old Greg')
     expect(page).to have_content('Makers Air B\'n\'G')
     expect(page).to have_link 'Requests', href: '/requests'
+  end
+
+  scenario "User not allowed to log in if not signed up" do
+    sign_in_user
+    expect(page).to have_content "Username or password incorrect"
   end
 end

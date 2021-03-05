@@ -9,9 +9,10 @@ production:
   encoding: unicode
   database: airbng
   pool: 2
-  
+
 test:
   adapter: postgresql
   encoding: unicode
   database: airbng_test
   pool: 2
+

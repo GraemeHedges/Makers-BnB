@@ -1,7 +1,7 @@
 class SignOutController < ApplicationController
 
   get '/sign-out' do
-    session[:username] = nil
+    session[:user] = nil
     redirect '/'
   end
 

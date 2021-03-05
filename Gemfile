@@ -13,3 +13,4 @@ gem 'sinatra-activerecord'
 gem 'activerecord'
 gem 'pg'
 gem 'database_cleaner-active_record'
+

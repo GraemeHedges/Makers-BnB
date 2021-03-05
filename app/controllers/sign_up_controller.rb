@@ -5,7 +5,13 @@ class SignUpController < ApplicationController
   end
 
   post '/sign-up' do
-    redirect '/'
+    if params[:password] === params[:confirm_password]
+      User.create(params)
+      redirect '/'
+    else
+      @password_error = "Passwords do not match"
+      erb(:sign_up)
+    end
   end
 
 end

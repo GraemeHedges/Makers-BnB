@@ -95,4 +95,4 @@ DEPENDENCIES
   sinatra-activerecord
 
 BUNDLED WITH
-   2.2.10
+   2.2.11
