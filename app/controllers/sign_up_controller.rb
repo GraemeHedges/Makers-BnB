@@ -1,5 +1,3 @@
-require_relative '../models/user.rb'
-
 class SignUp < ApplicationController
 
   get '/sign-up' do
