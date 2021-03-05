@@ -2,7 +2,9 @@ require_relative './../app/models/user.rb'
 
 describe User do
   
-  User.create({email: 'oldgregg@greggs.co.ugreggs', name: 'Old Greg', password: 'greggypass'})
+  before(:all) do
+    User.create({email: 'oldgregg@greggs.co.ugreggs', name: 'Old Greg', password: 'greggypass'})
+  end
 
   describe '.create' do
     it 'it adds a user to the database and can see name value' do    

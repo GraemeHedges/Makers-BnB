@@ -4,7 +4,7 @@ require 'bcrypt'
 class User < ActiveRecord::Base
   include BCrypt
 
-  self.establish_connection(ENV['ENVIRONMENT'].to_sym)
+  self.establish_connection(ENV['RACK_ENV'].to_sym)
   
   def self.create(params)
     user = User.new
