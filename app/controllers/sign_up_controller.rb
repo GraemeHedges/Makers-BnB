@@ -1,3 +1,5 @@
+require_relative '../models/user.rb'
+
 class SignUp < ApplicationController
 
   get '/sign-up' do
@@ -5,6 +7,7 @@ class SignUp < ApplicationController
   end
 
   post '/sign-up' do
+    User.create(params)
     redirect '/'
   end
 
